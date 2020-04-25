@@ -1,11 +1,11 @@
-import React, { Component, Fragment } from 'react'
+import React, { Component, Fragment } from 'react';
 
 import ProductAdd from './ProductAdd.jsx'
 import ProductTable from './ProductTable.jsx'
 
 import graphQLFetch from './graphQLFetch'
 
-export default class ProductList extends Component {
+class ProductList extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
@@ -93,3 +93,5 @@ export default class ProductList extends Component {
 		)
 	}
 }
+
+export default ProductList;

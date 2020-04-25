@@ -2,22 +2,6 @@ body {
 	font-family: Arial, Helvetica, sans-serif;
 }
 
-table {
-	border-collapse: collapse;
-	margin-bottom: 3rem;
-}
-
-table, tr, td {
-	border: 1px solid black;
-}
-
-thead { font-weight: bold }
-
-td {
-	padding: 8px;
-	min-width: 150px;
-}
-
 section p { margin: 0 }
 
 form {

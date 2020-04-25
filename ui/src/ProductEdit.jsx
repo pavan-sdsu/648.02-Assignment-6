@@ -1,9 +1,12 @@
 import React, { Component } from 'react'
+import Button from 'react-bootstrap/Button'
+
+
 import NumInput from './NumInput.jsx';
 import TextInput from './TextInput.jsx';
 import graphQLFetch from './graphQLFetch.js';
 
-export default class ProductEdit extends Component {
+class ProductEdit extends Component {
 
 	state = { product: {} }
 
@@ -114,9 +117,11 @@ export default class ProductEdit extends Component {
 						<input type="text" id="image" defaultValue={Image} />
 					</div>
 
-					<button type="submit" onClick={this.onSubmit}>Update Product</button>
+					<Button variant="warning" type="submit" onClick={this.onSubmit}>Update Product</Button>
 				</form>
 			</div>
 		)
 	}
 }
+
+export default ProductEdit;

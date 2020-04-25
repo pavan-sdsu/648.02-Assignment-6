@@ -7,8 +7,9 @@
 
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-import { HashRouter as Router, Switch, Route, Redirect } from 'react-router-dom'
+import { HashRouter as Router, Switch, Route, Redirect} from "react-router-dom";
 
+import Navbar from './Navbar.jsx'
 import ProductList from './ProductList.jsx'
 import ProductEdit from './ProductEdit.jsx'
 import ProductView from './ProductView.jsx'
@@ -19,13 +20,16 @@ class App extends Component {
 	render() {
 		return (
 			<Router>
-				<Switch>
-					<Redirect exact from="/" to="/products" />
-					<Route path="/products" component={ProductList} />
-					<Route path="/edit/:id" component={ProductEdit} />
-					<Route path="/view/:id" component={ProductView} />
-					<Route component={NotFound} />
-				</Switch>
+				<Navbar />
+				<div className="container-fluid">
+					<Switch>
+						<Redirect exact from="/" to="/products" />
+						<Route path="/products" component={ProductList} />
+						<Route path="/edit/:id" component={ProductEdit} />
+						<Route path="/view/:id" component={ProductView} />
+						<Route component={NotFound} />
+					</Switch>
+				</div>
 			</Router>
 		)
 	}

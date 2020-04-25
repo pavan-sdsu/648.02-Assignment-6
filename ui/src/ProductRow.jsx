@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Link, withRouter } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 class ProductRow extends Component {
 	constructor(props) {
@@ -7,7 +7,8 @@ class ProductRow extends Component {
 		this.onDelete = this.onDelete.bind(this);
 	}
 
-	onDelete() {
+	onDelete(e) {
+		e.preventDefault();
 		this.props.deleteProduct(this.props.product._id)
 	}
 
@@ -20,10 +21,10 @@ class ProductRow extends Component {
 				<td>${ Price }</td>
 				<td>{ Category }</td>
 				<td><Link to={`/view/${_id}`}>View</Link></td>
-				<td><Link to={`/edit/${_id}`}>Edit</Link> / <button className="link" onClick={this.onDelete}>Delete</button></td>
+				<td><Link to={`/edit/${_id}`}>Edit</Link> / <a href="#" onClick={this.onDelete}>Delete</a></td>
 			</tr>
 		)
 	}
 }
 
-export default withRouter(ProductRow)
+export default ProductRow

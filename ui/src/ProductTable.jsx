@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import Table from 'react-bootstrap/Table'
 
 import ProductRow from './ProductRow.jsx'
 
@@ -13,7 +14,7 @@ export default class ProductTable extends Component {
 			<section>
 				<p>Showing all available products</p>
 				<hr />
-				<table>
+				<Table striped bordered hover>
 					<thead>
 						<tr>
 							<td>Product Name</td>
@@ -26,7 +27,7 @@ export default class ProductTable extends Component {
 					<tbody>
 						{rows}
 					</tbody>
-				</table>
+				</Table>
 			</ section>
 		)
 	}
