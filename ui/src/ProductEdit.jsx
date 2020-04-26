@@ -73,7 +73,7 @@ class ProductEdit extends Component {
 		graphQLFetch(query)
 			.then((res) => {
 				// console.log(res);
-				alert("Updated Successfully!");
+				this.props.showToast("success", "Product Edited Successfully")
 				this.setState((state, props) => {
 					state.product = res.data.updateProduct;
 					return state;

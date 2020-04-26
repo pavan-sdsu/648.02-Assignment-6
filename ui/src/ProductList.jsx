@@ -63,6 +63,7 @@ class ProductList extends Component {
 		.then((res) => {
 			this.setState((state, props) => {
 				state.products.push(res.data.addProduct);
+				this.props.showToast("success", "Product Added Successfully")
 				return state;
 			})
 		})
@@ -75,7 +76,7 @@ class ProductList extends Component {
 		graphQLFetch(query)
 		.then((res) => {
 			if (res.data.deleteProduct) {
-				alert("Deleted Successfully")
+				this.props.showToast("danger", "Product Deleted Successfully")				
 				this.getProducts();
 			}
 		})

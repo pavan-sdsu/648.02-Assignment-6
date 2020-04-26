@@ -49,3 +49,22 @@ button.link:focus { outline: none }
 hr {
 	margin-bottom: 1rem
 }
+
+.custom-toast {
+	position: fixed;
+	bottom: 50px;
+	left: 50%;
+	margin-bottom: 0px;
+	transform: translate(-50%, calc(100% + 50px));
+	animation: show-toast 3s;
+}
+
+@keyframes show-toast {
+	0%, 100% {
+		transform: translate(-50%, calc(100% + 50px));
+	}
+
+	30%, 70% {
+		transform: translate(-50%, 0%);
+	}
+}
